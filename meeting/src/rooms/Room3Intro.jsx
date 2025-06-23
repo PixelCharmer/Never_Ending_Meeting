@@ -1,7 +1,7 @@
 // Room3Intro.jsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/room3intro.scss';
+import '../styles/Room3Intro.scss';
 
 import room3Bg from '../assets/backgrounds/room3intro_bg.png'; // Replace with actual image path if different
 
