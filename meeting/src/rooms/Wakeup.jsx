@@ -38,15 +38,6 @@ const Wakeup = () => {
                         <br />
                         <p>Thanks for playing!</p>
                         <p>💤</p>
-                        <p className="log-time">
-                            <a
-                                href="https://your-form-or-end-logger.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Click here to log your escape time ⏱️
-                            </a>
-                        </p>
                     </div>
                 </div>
             )}
