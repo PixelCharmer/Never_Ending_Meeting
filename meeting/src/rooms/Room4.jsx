@@ -5,7 +5,7 @@ import SchmoozeDave from './SchmoozeDave'; // Update path if needed
 
 import room4Bg from '../assets/backgrounds/room4_bg.png';
 import entryPad from '../assets/game_elements/room4/entry_pad.png';
-import karaMussa from '../assets/game_elements/room4/kara_mussa.png';
+import karaMussa from '../assets/game_elements/room4/Kara_Mussa.png';
 
 const Room4 = () => {
     const [activePuzzle, setActivePuzzle] = useState(null);
