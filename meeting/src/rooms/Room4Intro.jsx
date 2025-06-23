@@ -2,33 +2,26 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Room4Intro.scss';
 
-import room4IntroBg from '../assets/backgrounds/room4intro_bg.png';
-import entryPad from '../assets/game_elements/room4/entry_pad.png';
-import karaMussa from '../assets/game_elements/room4/kara_mussa.png';
-
 const Room4Intro = () => {
     const navigate = useNavigate();
 
-    const handlePadClick = () => {
-        navigate('/room4'); // Assuming this leads to the interactive room puzzle
+    const handleBegin = () => {
+        navigate('/room4');
     };
 
     return (
-        <div className="room4intro-container">
-            <img src={room4IntroBg} alt="Room 4 Intro Background" className="room4intro-bg" />
-
-            <img
-                src={entryPad}
-                alt="Entry Pad"
-                className="entry-pad"
-                onClick={handlePadClick}
-            />
-
-            <img
-                src={karaMussa}
-                alt="Kara Mussa"
-                className="kara-mussa"
-            />
+        <div className="room4intro">
+            <div className="intro-box">
+                <h1>The Parking Lot: Final Stretch</h1>
+                <p>
+                    You're finally in your car. The engine is off. The parking lot guard — Dave — looms nearby, arms crossed and eyes sharp.
+                    Escaping unnoticed won't be easy. You'll need to start the car quietly, charm your way past Dave, and trigger a fake emergency call.
+                </p>
+                <p>
+                    Can you pull it off without raising suspicion?
+                </p>
+                <button onClick={handleBegin}>Begin</button>
+            </div>
         </div>
     );
 };
