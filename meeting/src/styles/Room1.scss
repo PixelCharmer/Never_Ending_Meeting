@@ -1,0 +1,211 @@
+﻿/* === Desk View (Room1Desk) === */
+.room1-bg {
+    position: relative;
+    background-image: url('../assets/backgrounds/room1_bg.png'); // Optional default fallback
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Clue Item Positions */
+.clue-img {
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.room1-bg .solitaire {
+    top: 12%;
+    left: 42%;
+    width: 28%;
+}
+
+.sticky1 {
+    top: 57%;
+    left: 42%;
+    width: 5%;
+}
+
+.sticky2 {
+    top: 57%;
+    left: 65%;
+    width: 5%;
+}
+
+.notepad {
+    top: 8%;
+    left: 75%;
+    width: 12%;
+}
+
+.room1-bg .clock {
+    top: 29%;
+    left: 78%;
+    width: 7.5%;
+}
+
+.room1-bg .stapler {
+    top: 58%;
+    left: 18%;
+    width: 10%;
+}
+
+.room1-bg .calendar {
+    top: 60%;
+    left: 86.5%;
+    width: 9%;
+}
+
+/* Overlay Clue Messages */
+.clue-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.clue-message {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    text-align: center;
+    white-space: pre-line;
+}
+
+/* === Clock Puzzle View (Room1Clock) === */
+.clock-puzzle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    color: #fff;
+    background: #111;
+    min-height: 100vh;
+}
+
+.digit-container {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.digit-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #222;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #333;
+    transition: transform 0.3s ease;
+}
+
+.digit {
+    font-size: 2.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0.3rem 0;
+    background: #000;
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px #000;
+    transition: transform 0.2s ease;
+}
+
+.arrow {
+    font-size: 1.5rem;
+    background: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.submit-button,
+.back-button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    background-color: #3c3c3c;
+    border: 2px solid #ccc;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #5c5c5c;
+    }
+}
+
+.clock-message {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: limegreen;
+}
+
+/* === Responsive Adjustments === */
+@media screen and (max-width: 768px) {
+    .room1-bg {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .clue-img {
+        width: 12vw;
+    }
+
+    .solitaire {
+        top: 10%;
+        left: 35%;
+    }
+
+    .sticky1 {
+        top: 60%;
+        left: 38%;
+    }
+
+    .sticky2 {
+        top: 60%;
+        left: 58%;
+    }
+
+    .clock {
+        top: 28%;
+        left: 72%;
+    }
+
+    .stapler {
+        top: 63%;
+        left: 12%;
+    }
+
+    .calendar {
+        top: 66%;
+        left: 74%;
+    }
+
+    .clue-message {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}

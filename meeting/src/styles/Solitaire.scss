@@ -1,0 +1,101 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.solitaire-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    overflow: hidden;
+}
+
+/* Aspect ratio preserved, height-based scaling to prevent vertical overflow */
+.solitaire-wrapper {
+    position: relative;
+    height: 90vh; /* Scale based on height */
+    aspect-ratio: 16 / 9; /* Matches your solitaire_screen.png layout */
+    background-image: url('../assets/game_elements/room1/solitaire_screen.png');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #222;
+}
+
+/* Uniform card styling — smaller size to reduce overlap */
+.card-img {
+    position: absolute;
+    width: 12%; /* Scales proportionally with wrapper */
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: transform 0.2s, border 0.2s;
+    z-index: 2;
+}
+
+.card-img.selected {
+    border: 3px solid gold;
+    transform: scale(1.05);
+}
+
+/* Carefully positioned slots (you can still fine-tune) */
+.card-slot-0 {
+    top: 0%;
+    left: 35%;
+}
+
+.card-slot-1 {
+    top: 0%;
+    left: 63.5%;
+}
+
+.card-slot-2 {
+    top: 32.5%;
+    left: 21%;
+}
+
+.card-slot-3 {
+    top: 32.5%;
+    left: 50%;
+}
+
+.card-slot-4 {
+    top: 65.5%;
+    left: 35%;
+}
+
+.card-slot-5 {
+    top: 65.5%;
+    left: 63.5%;
+}
+
+.submit-btn {
+    position: absolute;
+    top: 12%;
+    left: -8%; /* Moves button farther left to stay within full viewport */
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+    white-space: nowrap;
+}
+
+.message-display {
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+    background: rgba(0, 0, 0, 0.7);
+    color: fuchsia;
+    font: bold;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    z-index: 3;
+    border-radius: 5px;
+}

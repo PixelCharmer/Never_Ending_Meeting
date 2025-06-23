@@ -1,0 +1,122 @@
+.wakeup-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.wakeup-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.fade-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    animation: fadeOut 2s forwards;
+    z-index: 5;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.wakeup-text {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 12px;
+    z-index: 10;
+    animation: slideIn 1.5s ease-out;
+
+    h1 {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    p {
+        margin: 0.5rem 0;
+        font-size: 1.2rem;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.credits-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 20;
+}
+
+.credits-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    padding: 2rem;
+    animation: scrollCredits 20s linear forwards;
+}
+
+@keyframes scrollCredits {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.credits-scroll .log-time {
+    margin-top: 2rem;
+
+    a {
+        color: #00ffee;
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: 1.1rem;
+
+        &:hover {
+            color: #00bbff;
+        }
+    }
+}

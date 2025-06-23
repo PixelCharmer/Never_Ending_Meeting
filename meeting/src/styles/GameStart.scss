@@ -1,0 +1,63 @@
+.gamestart-container {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    @media (max-width: 768px) {
+        padding: 1rem;
+        background-position: top;
+    }
+}
+
+.gamestart-content {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+
+    .title {
+        font-size: 2.5rem;
+        color: #ffe066;
+        margin-bottom: 1rem;
+        font-weight: bold;
+
+        @media (max-width: 480px) {
+            font-size: 1.8rem;
+        }
+    }
+
+    .intro,
+    .objective {
+        color: #eee;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+
+        @media (max-width: 480px) {
+            font-size: 1rem;
+        }
+    }
+
+    .start-button {
+        margin-top: 1rem;
+        padding: 0.8rem 2rem;
+        font-size: 1.1rem;
+        background-color: #ff6f61;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #ff5a4c;
+        }
+    }
+}

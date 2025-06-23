@@ -1,0 +1,138 @@
+.coffee-puzzle-layout {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color: #121212;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 2rem;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+}
+
+.clue-panel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    img {
+        max-width: 100%;
+        max-height: 90vh;
+        border-radius: 10px;
+        border: 2px solid #444;
+    }
+}
+
+.coffee-controls {
+    flex: 1;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 12px;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .section {
+        margin-bottom: 1.5rem;
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            button {
+                padding: 0.5rem 1rem;
+                background: #444;
+                border: none;
+                color: white;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: 0.2s ease;
+
+                &.selected {
+                    background: #7acc7a;
+                    font-weight: bold;
+                }
+
+                &:hover {
+                    background: #666;
+                }
+            }
+        }
+
+        .sugar-controls {
+            display: flex;
+            gap: 10px;
+
+            button {
+                font-size: 1.5rem;
+                padding: 0.5rem 1rem;
+                background: #444;
+                color: #fff;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+
+                &:hover {
+                    background: #666;
+                }
+            }
+        }
+    }
+
+    .submit-area {
+        display: flex;
+        flex-direction: column; /* Changed to column to stack button-row and feedback */
+        align-items: flex-start; /* Align button-row to the start */
+        margin-top: 2rem;
+        width: 100%; /* Ensure it takes full width for text alignment */
+
+        .button-row {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            margin-bottom: 0.5rem; /* Add some space below the buttons */
+
+            button {
+                padding: 0.6rem 1.5rem;
+                font-size: 1rem;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                color: black;
+                min-width: 120px;
+            }
+
+            .reset-btn {
+                background: #7acc7a;
+
+                &:hover {
+                    background: #aaa;
+                }
+            }
+        }
+
+        .feedback {
+            margin-top: 0; /* Remove previous top margin */
+            font-size: 0.95rem;
+            color: #ffcccc;
+            text-align: right; /* Keep text aligned right */
+            width: 100%; /* Ensure it spans the full width to apply text-align */
+        }
+    }
+}

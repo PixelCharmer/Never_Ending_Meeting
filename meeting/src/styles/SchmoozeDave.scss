@@ -1,0 +1,64 @@
+.dave-puzzle {
+    background-color: #222;
+    color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+
+    .question {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        button {
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+            background-color: #444;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #666;
+            }
+        }
+    }
+
+    .error-msg {
+        color: #ff6666;
+        margin-top: 1rem;
+    }
+
+    .button-row {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+
+        button {
+            padding: 0.5rem 1rem;
+            background-color: #555;
+            border: none;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #777;
+            }
+        }
+    }
+}

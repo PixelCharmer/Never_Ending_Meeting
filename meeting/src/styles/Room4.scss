@@ -1,0 +1,84 @@
+.room4-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.room4-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kara-mussa {
+    position: absolute;
+    top: 26%;
+    left: 55%;
+    width: 130px;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+/* Clickable puzzle zones */
+.click-zone {
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.pad-zone {
+    position: fixed; // instead of absolute
+    bottom: 0%;
+    right: 36%;
+    width: 180px;
+    height: 90px;
+}
+
+.dave-zone {
+    bottom: 53%;
+    left: 45%;
+    width: 120px;
+    height: 180px;
+}
+
+/* Overlay for puzzles */
+.puzzle-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.puzzle-box {
+    background: #fdfdfd;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 0 15px #000;
+}
+
+.close-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #555;
+    }
+}
