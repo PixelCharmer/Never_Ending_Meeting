@@ -60,3 +60,14 @@
     font-size: 1.2rem;
     height: 1.5rem;
 }
+
+.game-btn {
+    position: absolute;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+}

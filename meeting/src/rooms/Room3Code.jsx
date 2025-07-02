@@ -31,6 +31,10 @@ const Room3Code = () => {
         }
     };
 
+    const handleGoBack = () => {
+        navigate('/room3'); 
+    };
+
     return (
         <div className="code-room-container">
             <h2>Enter the 4-Digit Code</h2>
@@ -45,6 +49,7 @@ const Room3Code = () => {
             <div className="buttons">
                 <button onClick={handleSubmit}>Enter</button>
                 <button onClick={handleClear}>Clear</button>
+                <button onClick={handleGoBack}>Go Back</button>
             </div>
 
             <p className="message">{message}</p>
