@@ -44,10 +44,17 @@ const Room1Solitaire = () => {
         const isCorrect = cards.every((card, index) => card === correctOrder[index]);
         if (isCorrect) {
             setMessage('Enough distraction - go set the time according to Steves time zone');
-            setTimeout(() => navigate('/room1'), 1500);
+            setTimeout(() => navigate('/room1'), 2000);
         } else {
             setMessage('Wrong order. Try again!');
         }
+    };
+
+    localStorage.setItem('solitaire-complete', 'true');
+
+    // New handler for the "Go Back" button
+    const handleGoBack = () => {
+        navigate('/room1'); // Navigate to the room1desk route
     };
 
     return (
@@ -63,6 +70,9 @@ const Room1Solitaire = () => {
                     />
                 ))}
                 <button className="submit-btn" onClick={handleSubmit}>Submit</button>
+                {message && <div className="message-display">{message}</div>}
+                {/* New "Go Back" button */}
+                <button className="go-back-btn" onClick={handleGoBack}>Go Back to Desk</button>
                 {message && <div className="message-display">{message}</div>}
             </div>
         </div>

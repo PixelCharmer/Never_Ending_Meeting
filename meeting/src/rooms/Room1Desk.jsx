@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Room1.scss';
 
@@ -16,13 +16,33 @@ const Room1Desk = () => {
     const [clicked, setClicked] = useState({
         sticky1: false,
         sticky2: false,
-        notepad: false,
-        clock: false,
         stapler: false,
         calendar: false
     });
-
     const [selectedClue, setSelectedClue] = useState('');
+
+    const [clockUnlocked, setClockUnlocked] = useState(false);
+
+    useEffect(() => {
+        const storedClicks = JSON.parse(localStorage.getItem('room1-clicks'));
+        const solitaireDone = localStorage.getItem('solitaire-complete') === 'true';
+
+        if (storedClicks) setClicked(storedClicks);
+
+        const allCluesClicked = storedClicks && Object.values(storedClicks).every(Boolean);
+        if (allCluesClicked && solitaireDone) {
+            setClockUnlocked(true);
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('room1-clicks', JSON.stringify(clicked));
+        const allCluesClicked = Object.values(clicked).every(Boolean);
+        const solitaireDone = localStorage.getItem('solitaire-complete') === 'true';
+        if (allCluesClicked && solitaireDone) {
+            setClockUnlocked(true);
+        }
+    }, [clicked]);
 
     const handleClueClick = (key, message) => {
         setClicked((prev) => ({ ...prev, [key]: true }));
@@ -31,6 +51,14 @@ const Room1Desk = () => {
 
     const closeClue = () => {
         setSelectedClue('');
+    };
+
+    const handleClockClick = () => {
+        if (clockUnlocked) {
+            navigate('/room1clock');
+        } else {
+            alert('Finish all clues and the Solitaire game before unlocking the clock!');
+        }
     };
 
     return (
@@ -66,7 +94,7 @@ const Room1Desk = () => {
                 src={clock}
                 alt="Digital Clock"
                 className="clue-img clock"
-                onClick={() => navigate('/room1clock')}
+                onClick={handleClockClick}
             />
 
             <img

@@ -24,7 +24,7 @@ const Room3Code = () => {
         if (input === CORRECT_CODE) {
             setMessage('✅ Correct! Click Coffee Put To Brew.');
             localStorage.setItem('room3_code_solved', 'true'); // for Room3Code.jsx
-            setTimeout(() => navigate('/room3'), 1500); // delay return
+            setTimeout(() => navigate('/room3'), 1800); // delay return
         } else {
             setMessage('❌ Incorrect. Try again.');
             setInput('');

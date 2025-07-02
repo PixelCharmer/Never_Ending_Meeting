@@ -6,7 +6,7 @@ import coffeeOrderClue from '../assets/game_elements/room3/coffee_order.png';
 
 const correctOrder = {
     roast: 'Medium',
-    sugar: 3,
+    sugar: 5,
     creamer: 'Hazelnut',
 };
 

@@ -21,7 +21,6 @@ const Room4 = () => {
                 src={entryPad}
                 alt="Car Start Pad"
                 className="click-zone pad-zone"
-                onClick={() => openPuzzle('car')}
             />
 
 
@@ -36,12 +35,6 @@ const Room4 = () => {
             {activePuzzle && (
                 <div className="puzzle-overlay">
                     <div className="puzzle-box">
-                        {activePuzzle === 'car' && (
-                            <CarStartPuzzle
-                                onSuccess={closePuzzle}
-                                onClose={closePuzzle}
-                            />
-                        )}
                         {activePuzzle === 'riddle' && (
                             <SchmoozeDave
                                onSuccess={closePuzzle}

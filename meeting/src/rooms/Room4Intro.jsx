@@ -14,7 +14,7 @@ const Room4Intro = () => {
             <div className="intro-box">
                 <h1>The Parking Lot: Final Stretch</h1>
                 <p>
-                    You're finally in your car. The engine is off. The parking lot guard — Dave — looms nearby, arms crossed and eyes sharp.
+                    You're finally in your car. The engine is off. The parking lot guard - Dave looms nearby, arms crossed and eyes sharp.
                     Escaping unnoticed won't be easy. You'll need to start the car quietly, charm your way past Dave, and trigger a fake emergency call.
                 </p>
                 <p>

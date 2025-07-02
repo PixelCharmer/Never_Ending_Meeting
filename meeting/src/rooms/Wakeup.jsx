@@ -4,13 +4,17 @@ import bgImage from '../assets/backgrounds/room1_bg.png';
 
 const Wakeup = () => {
     const [fade, setFade] = useState(true);
+    const [showText, setShowText] = useState(true);
     const [showCredits, setShowCredits] = useState(false);
 
     useEffect(() => {
-        const fadeTimer = setTimeout(() => setFade(false), 2000);
-        const creditsTimer = setTimeout(() => setShowCredits(true), 7000);
+        const fadeTimer = setTimeout(() => setFade(false), 2000);       // Fade out black overlay
+        const textTimer = setTimeout(() => setShowText(false), 6000);   // Hide wakeup text
+        const creditsTimer = setTimeout(() => setShowCredits(true), 5000); // Show credits
+
         return () => {
             clearTimeout(fadeTimer);
+            clearTimeout(textTimer);
             clearTimeout(creditsTimer);
         };
     }, []);
@@ -20,7 +24,7 @@ const Wakeup = () => {
             <img src={bgImage} alt="Room Background" className="wakeup-bg" />
             {fade && <div className="fade-overlay" />}
 
-            {!fade && !showCredits && (
+            {!fade && showText && (
                 <div className="wakeup-text">
                     <h1>Your eyes slowly open</h1>
                     <p>Then your screen lights back up.</p>
@@ -34,10 +38,19 @@ const Wakeup = () => {
                     <div className="credits-scroll">
                         <h2>The Never Ending Meeting</h2>
                         <p>Storyline by Laura Leach</p>
-                        <p>Code by Kari & ChatGPT</p>
+                        <p>Code by Kari Alcoset</p>
                         <br />
                         <p>Thanks for playing!</p>
                         <p>💤</p>
+                        <p className="log-time">
+                            <a
+                                href="https://forms.gle/uvPk9JVSndkmA14r5"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Click here to log your escape time ⏱️
+                            </a>
+                        </p>
                     </div>
                 </div>
             )}

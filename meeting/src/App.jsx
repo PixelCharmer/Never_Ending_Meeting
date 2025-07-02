@@ -12,7 +12,6 @@ import Room3Code from './rooms/Room3Code';
 import Room3Coffee from './rooms/Room3Coffee';
 import Room4Intro from './rooms/Room4Intro';
 import Room4 from './rooms/Room4';
-import CarStartPuzzle from './rooms/CarStartPuzzle';
 import SchmoozeDave from './rooms/SchmoozeDave'; // Update path if needed
 import Wakeup from "./rooms/Wakeup";
 
@@ -32,7 +31,6 @@ const App = () => {
                 <Route path="/room3coffee" element={<Room3Coffee />} />
                 <Route path="/room4intro" element={<Room4Intro />} />
                 <Route path="/room4" element={<Room4 />} />
-                <Route path="/carstartpuzzle" element={<CarStartPuzzle />} />
                 <Route path="/schmoozedave" element={<SchmoozeDave />} />
                 <Route path="/wakeup" element={<Wakeup />} />   
             </Routes>
