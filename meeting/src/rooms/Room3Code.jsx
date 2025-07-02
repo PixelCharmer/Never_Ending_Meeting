@@ -22,7 +22,7 @@ const Room3Code = () => {
 
     const handleSubmit = () => {
         if (input === CORRECT_CODE) {
-            setMessage('✅ Correct! Click Coffee Put To Brew.');
+            setMessage('✅ Correct! Coffee beans collected');
             localStorage.setItem('room3_code_solved', 'true'); // for Room3Code.jsx
             setTimeout(() => navigate('/room3'), 1800); // delay return
         } else {
