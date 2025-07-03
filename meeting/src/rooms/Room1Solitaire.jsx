@@ -11,7 +11,7 @@ import card8C from '../assets/game_elements/room1/cards/card_8clover.png';
 import card10D from '../assets/game_elements/room1/cards/card_10diamond.png';
 import cardKH from '../assets/game_elements/room1/cards/card_kheart.png';
 
-const correctOrder = [card2S, card4C, card8C, card6D, card10D, cardKH];
+const correctOrder = [card6D, card10D, cardKH, card2S, card4C, card8C];
 
 const Room1Solitaire = () => {
     const navigate = useNavigate();

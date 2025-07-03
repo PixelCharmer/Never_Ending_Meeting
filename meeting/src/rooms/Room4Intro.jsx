@@ -15,7 +15,7 @@ const Room4Intro = () => {
                 <h1>The Parking Lot: Final Stretch</h1>
                 <p>
                     You're finally in your car. The engine is off. The parking lot guard - Dave looms nearby, arms crossed and eyes sharp.
-                    Escaping unnoticed won't be easy. You'll need to start the car quietly, charm your way past Dave, and trigger a fake emergency call.
+                    Escaping unnoticed won't be easy. You'll need to charm your way past Dave.
                 </p>
                 <p>
                     Can you pull it off without raising suspicion?

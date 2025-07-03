@@ -126,13 +126,14 @@
                 }
             }
         }
+    }
 
-        .feedback {
-            margin-top: 0; /* Remove previous top margin */
-            font-size: 0.95rem;
-            color: #ffcccc;
-            text-align: right; /* Keep text aligned right */
-            width: 100%; /* Ensure it spans the full width to apply text-align */
-        }
+    .feedback {
+        margin-top: 0; /* Remove previous top margin */
+        font-size: 0.95rem;
+        color: #ffcccc;
+        text-align: right; /* Keep text aligned right */
+        width: 100%; /* Ensure it spans the full width to apply text-align */
     }
 }
+

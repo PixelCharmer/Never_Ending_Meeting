@@ -183,7 +183,7 @@ const Room2 = () => {
             {hintMessage && <div className="hint-message">{hintMessage}</div>}
 
             {/* Hint Nodes */}
-            <div className="hint-node node1" onClick={() => toggleHint('hint1', 'He loves the emoji that reminds him of the circus')}></div>
+            <div className="hint-node node1" onClick={() => toggleHint('hint1', 'He loves the emoji that reminds him of the rodeo')}></div>
             <div className="hint-node node2" onClick={() => toggleHint('hint2', 'He’s a sucker for anything that makes his eyes water from laughter.')}></div>
             <div className="hint-node node3" onClick={() => toggleHint('hint3', 'Pretty sure 🐲 annoyed him during the last sync.')}></div>
             <div className="hint-node node4" onClick={() => toggleHint('hint4', 'Shine something up high so he wont see you crawl to the vent')}></div>

@@ -89,6 +89,7 @@ const Room3Coffee = () => {
                 <div className="submit-area">
                     <div className="button-row">
                         <button className="reset-btn" onClick={handleSubmit}>Brew It</button>
+                        <button className="back-btn" onClick={() => navigate('/room3')}>Go Back</button>
                     </div>
                 </div>
                 <p className="feedback">{message}</p>

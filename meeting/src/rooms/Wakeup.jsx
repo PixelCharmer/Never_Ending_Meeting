@@ -1,6 +1,6 @@
 ﻿import React, { useEffect, useState } from 'react';
 import '../styles/Wakeup.scss';
-import bgImage from '../assets/backgrounds/room1_bg.png';
+import bgImage from '../assets/backgrounds/wakeup_bg.png';
 
 const Wakeup = () => {
     const [fade, setFade] = useState(true);
